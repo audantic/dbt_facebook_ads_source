@@ -17,3 +17,6 @@ vars:
     campaign_history: "{{ source('facebook_ads','campaign_history') }}"
     creative_history: "{{ source('facebook_ads','creative_history') }}"
   facebook_ads__basic_ad_passthrough_metrics: []
+dispatch:
+  - macro_namespace: dbt_utils
+    search_order: ['spark_utils', 'dbt_utils']
